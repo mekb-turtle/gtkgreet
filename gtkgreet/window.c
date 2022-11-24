@@ -53,9 +53,9 @@ static void window_set_focus(struct Window *win, struct Window *old);
 
 void window_update_clock(struct Window *ctx) {
     char time[128];
-    int size = 96000;
+    int size = 56000;
     if (gtkgreet->focused_window == NULL || ctx == gtkgreet->focused_window) {
-        size = 32000;
+        size = 24000;
     }
     g_snprintf(time, 128, "<span size='%d'>%s</span>", size, gtkgreet->time);
     gtk_label_set_markup((GtkLabel*)ctx->clock_label, time);
