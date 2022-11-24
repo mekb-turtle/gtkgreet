@@ -100,7 +100,7 @@ struct GtkGreet* create_gtkgreet() {
 }
 
 void gtkgreet_activate(struct GtkGreet *gtkgreet) {
-    gtkgreet->draw_clock_source = g_timeout_add_seconds(5, gtkgreet_update_clocks_handler, gtkgreet);
+    gtkgreet->draw_clock_source = g_timeout_add_seconds(1, gtkgreet_update_clocks_handler, gtkgreet);
     gtkgreet_setup_question(gtkgreet, QuestionTypeInitial, gtkgreet_get_initial_question(), NULL);
     gtkgreet_update_clocks(gtkgreet);
 }
